@@ -1,5 +1,6 @@
 function(data) {
     var madlib = $$('#madlibs').madlib;
+    var db = $$(this).app.db;
 
     var errors = false;
 	$(this).find('input[type="text"]').each(function(){
@@ -14,9 +15,15 @@ function(data) {
 	});
 	if (!errors) {
 	    $('#madlib').show();
-	    madlib.lib_count++;
 	    
-        $$(this).app.db.saveDoc(madlib, {});
+	    // Asynchronously update the number of times this has been used
+        db.openDoc(madlib._id, {
+            success: function(doc) {
+        	    doc.lib_count++;
+        	    madlib.lib_count = doc.lib_count;
+                db.saveDoc(doc, {});
+            }
+        });
 	}
 	return(false);
 };
