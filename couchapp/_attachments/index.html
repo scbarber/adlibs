@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Mad Libs</title>
-    <link rel="stylesheet" href="style/main.css" type="text/css">
-  </head>
-  <body>
-	<header>
-	    <div id="account"></div>
-	    <h1>Mad Libs</h1>
-		<nav>
-			<a href="#/">Home</a>
-			<a href="#/madlibs/recent">Recent MadLibs</a>
-		</nav>
-	</header>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Mad Libs</title>
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" media="all" href="style/less.css"/>
+		<link rel="stylesheet" media="all" href="style/main.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+	</head>
+	<body lang="en">
+		<header>
+			<div id="account"></div>
+			<h1>Mad Libs</h1>
+			<nav>
+				<a href="#/">Home</a> |
+				<a href="#/madlibs/recent">Recent</a>
+			</nav>
+		</header>
 
-    <section id="profile"></section>
-	<section id="madlibs"></section>
-
-  </body>
-  <script src="vendor/couchapp/loader.js"></script>
-  <script src="vendor/couchapp/jquery.pathbinder.js"></script>
-  <script type="text/javascript" charset="utf-8">
-    $.couch.app(function(app) {
-      $("#account").evently("account", app);
-      $("#profile").evently("profile", app);
-      $.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
-      $("#madlibs").evently("madlibs", app);
-      $.pathbinder.begin("/");
-    });
-  </script>
+		<section id="profile"></section>
+		<section id="madlibs"></section>
+	</body>
+	<script src="vendor/couchapp/loader.js"></script>
+	<script src="vendor/couchapp/jquery.pathbinder.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$.couch.app(function(app) {
+		$("#account").evently("account", app);
+		$("#profile").evently("profile", app);
+		$.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
+		$("#madlibs").evently("madlibs", app);
+		$.pathbinder.begin("/");
+		});
+	</script>
 </html>

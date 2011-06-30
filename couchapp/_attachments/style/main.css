@@ -1,20 +1,135 @@
-div#account { float: right; }
-textarea { height: 100px; width: 300px; }
+/* General Resets */
+h1, h2, h3 { 
+    text-shadow: #f9f9f9 2px 2px 2px;
+    font-family: Georgia, serif;
+}
 label { display: block; font-weight: bold; }
+a { color: #888; text-decoration: none; text-shadow: #f9f9f9 1px 1px 1px; }
+a:hover { text-decoration: underline; }
+a:visited { color: #444; }
+input { font-size: 16px; }
+
+form {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-color: rgb(222,222,222);
+    padding: 1em;
+}
+form input[type="text"] { width: 50%; }
+
+/* Layout and styles */
+header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: rgb(60,60,60);
+    color: rgb(232,232,232);
+}
+
+header a,
+header a:visited {
+    color: #888;
+    text-shadow: #333 1px 1px 1px;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: white;
+}
+
+div#account { float: right; }
+
+header h1 {
+    color: rgb(232,232,232);
+    text-shadow: #333 2px 2px 2px;
+    margin-left: 48px;
+}
+
+nav {
+    margin: 10px 0 0 48px;
+}
+
+
+#profile {
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
 
 #profile form {
     display: none;
     margin: 1em 0;
 }
 
+#profile form textarea { height: 150px; width: 50%; }
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
 #profile div {
     cursor: pointer;
-    padding: 5px;
+    padding: 5px 15px;
     border: 2px solid #ccc;
     background: #eee;
     display: inline-block;
     color: #888;
+    text-shadow: #f9f9f9 1px 1px 1px;
 }
 
-#tokens form input { display: block; }
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+#profile div:hover {
+    background: #e0e0e0;
+}
+
+.tags {
+    color: #888;
+    font-size: 11px;
+    font-style: oblique;
+}
+.tags span {
+    background: rgb(60,60,60);
+    color: rgb(232,232,232);
+    padding: 1px 7px;
+    margin-left: 2px;
+    border: 1px solid rgb(60,60,60);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    text-shadow: #333 1px 1px 1px;
+}
+.tags span:hover {
+    color: rgb(60,60,60);
+    background: rgb(232,232,232);
+    text-shadow: #f9f9f9 1px 1px 1px;
+}
+
+#madlibs {
+    text-shadow: #f9f9f9 1px 1px 1px;
+}
+
+#tokens, #madlib {
+    margin-top: 1em;
+}
+
+#tokens form input { display: block; margin-bottom: 1em; }
 #tokens form input.hasErrors { border-color: red; }
+
+#madlib span { text-decoration: underline; }
+
+#madlibs ul {
+    list-style: none;
+    border-top: 1px solid #ddd;
+    margin-top: 1em;
+}
+
+#madlibs ul li {
+    border-bottom: 1px solid #ddd;
+    padding: 1em 0;
+}
+
+#madlibs ul li:nth-child(even) {
+    background: #eee;
+}
