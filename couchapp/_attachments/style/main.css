@@ -39,7 +39,11 @@ header a:hover {
     color: white;
 }
 
-div#account { float: right; }
+#account { float: right; }
+#account * { display: inline-block; }
+#account form { background: rgb(80,80,80); }
+#account form input { width: auto; }
+#account label { font-weight: normal; }
 
 header h1 {
     color: rgb(232,232,232);
