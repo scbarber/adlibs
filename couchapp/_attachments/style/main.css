@@ -17,3 +17,4 @@ label { display: block; font-weight: bold; }
 }
 
 #tokens form input { display: block; }
+#tokens form input.hasErrors { border-color: red; }
