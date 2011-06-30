@@ -7,5 +7,8 @@ function(data, req) {
             madlib = doc;
         }
     }, {async: false});
+    
+    madlib.html = madlib.madlib.replace(/\{\{[\w-_\d]+\}\}/g, function(id){return '<span id="' + id.replace('{{', '').replace('}}', '') + '"></span>';});
+    
     return madlib;
 };
