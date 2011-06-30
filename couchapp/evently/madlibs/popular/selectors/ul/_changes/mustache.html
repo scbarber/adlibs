@@ -1,0 +1,11 @@
+  {{#madlibs}}
+	<li>
+		<a class="title" href="#/madlibs/view/{{id}}">{{title}}</a>
+		<div class="popularity">{{lib_count}} views</div>
+		<div class="tags">Tags:
+			{{#tags}}
+			<span>{{.}}</span>
+			{{/tags}}
+		</div>
+	</li>
+  {{/madlibs}}

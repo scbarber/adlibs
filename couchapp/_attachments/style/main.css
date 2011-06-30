@@ -133,3 +133,10 @@ input[type="reset"]:hover,
 #madlibs ul li:nth-child(even) {
     background: #eee;
 }
+
+.popularity {
+    float: right;
+    font-size: 11px;
+    color: #aaa;
+    font-style: oblique;
+}
