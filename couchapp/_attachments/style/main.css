@@ -15,3 +15,5 @@ label { display: block; font-weight: bold; }
     display: inline-block;
     color: #888;
 }
+
+#tokens form input { display: block; }
