@@ -1,0 +1,3 @@
+div#account { float: right; }
+textarea { height: 100px; width: 300px; }
+label { display: block; font-weight: bold; }

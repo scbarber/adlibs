@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mad Lib Test 1</title>
+</head>
+<body>
+    <form>
+        <input name="noun-1" placeholder="noun 1"><br>
+        <input name="noun-2" placeholder="noun 2"><br>
+        <input type="submit" value="Lib it!">
+    </form>
+    <div style="display: none">
+        The <span id="noun-1"></span> will hit the <span id="noun-2"></span>.
+    </div>
+</body>
+<script src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('form').submit(function(){
+		$('#noun-1').html($('input[name="noun-1"]').eq(0).val());
+		$('#noun-2').html($('input[name="noun-2"]').eq(0).val());
+		$('div').show();
+		return(false);
+    })
+});
+</script>
+</html>

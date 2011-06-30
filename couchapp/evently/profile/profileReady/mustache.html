@@ -1,0 +1,21 @@
+<div class="avatar">
+  {{#gravatar_url}}<img src="{{gravatar_url}}"/>{{/gravatar_url}}
+  <div class="name">
+    {{name}}
+  </div>
+</div>
+
+<form>
+	<label>Title:</label>
+	<input type="text" name="title" placeholder="My cool madlib!">
+	<label>MadLib:</label>
+	<textarea name="madlib"></textarea>
+	<p>Use a mustache { { } } to mark the placeholders.</p>
+
+	<label>Tags (comma separated):</label>
+	<input type="text" name="tags"><br>
+
+	<input type="submit" value="Add">
+</form>
+
+<div style="clear:left;"></div>
