@@ -3,6 +3,7 @@ function(data) {
 
 	$('#madlib span').each(function(){
 		var name = $(this).attr('id');
+		$.log(name);
 		var placeholder = name.replace(/[-_]/g, ' ').replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 		$.formation.addInput({required:true,name:name,placeholderValue:placeholder});
 	});
@@ -18,5 +19,4 @@ function(data) {
 		$('#madlib').show();
 		return(false);
     })
-	
 };
