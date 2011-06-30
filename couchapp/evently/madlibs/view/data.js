@@ -10,5 +10,7 @@ function(data, req) {
     
     $$(this).madlib = doc;
     
+    doc.saved_count = doc.results.length;
+    
     return doc;
 };
