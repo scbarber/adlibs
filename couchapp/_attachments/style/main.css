@@ -1,3 +1,17 @@
 div#account { float: right; }
 textarea { height: 100px; width: 300px; }
 label { display: block; font-weight: bold; }
+
+#profile form {
+    display: none;
+    margin: 1em 0;
+}
+
+#profile div {
+    cursor: pointer;
+    padding: 5px;
+    border: 2px solid #ccc;
+    background: #eee;
+    display: inline-block;
+    color: #888;
+}

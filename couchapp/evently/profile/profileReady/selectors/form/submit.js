@@ -11,6 +11,7 @@ function() {
   $$(this).app.db.saveDoc(fdoc, {
     success : function() {
       form[0].reset();
+      $(form[0]).hide()
     }
   });
   return false;
