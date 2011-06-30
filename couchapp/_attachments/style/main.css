@@ -144,3 +144,13 @@ input[type="reset"]:hover,
     color: #aaa;
     font-style: oblique;
 }
+
+.meta {
+    font-size: 11px;
+    color: #aaa;
+}
+
+.avatar img {
+    float: left;
+    margin-right: 1em;
+}
