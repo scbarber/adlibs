@@ -1,15 +1,13 @@
 <h3>Recent MadLibs</h3>
 <ul>
   {{#madlibs}}
-    <li>
-      <div class="avatar">
-        {{#gravatar_url}}<img src="{{gravatar_url}}" alt="{{name}}"/>{{/gravatar_url}}
-        <div class="name">
-          {{nickname}}
-        </div>
-      </div>
-      <a href="#/madlibs/view/{{id}}">{{title}}</a>
-      <div style="clear:left;"></div>
-    </li>
+	<li>
+		<a class="title" href="#/madlibs/view/{{id}}">{{title}}</a>
+		<div class="tags">Tags:
+			{{#tags}}
+			<span>{{.}}</span>
+			{{/tags}}
+		</div>
+	</li>
   {{/madlibs}}
 </ul>
