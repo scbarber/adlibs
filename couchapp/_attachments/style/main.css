@@ -39,8 +39,8 @@ header a:hover {
     color: white;
 }
 
-#account { float: right; font-size: 13px; }
-#account * { display: inline-block; }
+#account { float: right; }
+#account * { display: inline-block; font-size: 13px; }
 #account form { background: rgb(80,80,80); }
 #account form input { width: auto; }
 #account label { font-weight: normal; }
