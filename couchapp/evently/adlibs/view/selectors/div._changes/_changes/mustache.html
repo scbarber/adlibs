@@ -1,0 +1,33 @@
+<div class="meta">
+	<div class="actions">
+		{{#can_edit}}<a class="edit" href="#/adlibs/edit/{{_id}}">edit</a>{{/can_edit}}
+		{{#can_delete}}<a class="delete" href="#/adlibs/delete/{{_id}}">delete</a>{{/can_delete}}
+	</div>
+	{{#profile}}
+	<div class="avatar">
+      {{#gravatar_url}}<img src="{{gravatar_url}}" alt="{{name}}"/>{{/gravatar_url}}
+      <div class="name">
+        {{nickname}}
+      </div>
+    </div>
+    {{/profile}}
+	Votes: {{votes}}
+	Views: {{lib_count}}
+	Saved: {{saved_count}}
+	<div class="tags">Tags:
+		{{#tags}}
+		<a class="tag" href="#/adlibs/tagged/{{.}}">{{.}}</a>
+		{{/tags}}
+	</div>
+	<div stye="clear: left"/>
+</div>
+{{#saved_count}}
+<div id="saved-results">
+	<h3>Saved Results</h3>
+	<ul>
+{{#results}}
+		<li>Saved by {{#profile}}{{nickname}}{{/profile}}&nbsp;{{created_on}}</li>
+{{/results}}
+	</ul>
+</div>
+{{/saved_count}}
