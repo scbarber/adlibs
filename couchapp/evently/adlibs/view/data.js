@@ -12,6 +12,10 @@ function(data, req) {
     $$(this).adlib = doc;
     
     doc.saved_count = doc.results.length;
+    
+    for (r in doc.results) {
+        doc.results[r].created_on = $.prettyDate(doc.results[r].created_on);
+    }
 
     if (profile && doc.profile.name == profile.name) {
         doc.can_edit = true;

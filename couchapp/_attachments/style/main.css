@@ -20,7 +20,7 @@ form {
 div#fancybox-outer { background-color: #fafafa; }
 div#fancybox-content { border-color: #fafafa; }
 
-form input[type="text"] { width: 50%; }
+form input[type="text"] { width: 100%; }
 
 /* Layout and styles */
 header {
@@ -128,10 +128,21 @@ input[type="reset"]:hover,
     margin-top: 1em;
 }
 
-#tokens form input { display: block; margin-bottom: 1em; }
+#tokens { width: 528px; }
+
+#tokens form input { display: block; margin: 0 auto 1em; }
 #tokens form input.hasErrors { border-color: red; }
 
-#adlib article span { text-decoration: underline; }
+#saved-results {
+    float: right;
+    width: 252px;
+    font-size: smaller;
+}
+
+#saved-results ul { margin-left: 2em; }
+#saved-results ul li { cursor: pointer; }
+
+.adlib article span { text-decoration: underline; }
 
 #adlibs ul#list_of_libs {
     list-style: none;
