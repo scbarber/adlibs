@@ -11,6 +11,11 @@
 	Votes: {{votes}}
 	Views: {{lib_count}}
 	Saved: {{saved_count}}
+	<div class="tags">Tags:
+		{{#tags}}
+		<a class="tag" href="#/adlibs/tagged/{{.}}">{{.}}</a>
+		{{/tags}}
+	</div>
 	<div stye="clear: left"/>
 </div>
 <div id="tokens">

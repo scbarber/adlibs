@@ -9,7 +9,7 @@ function() {
   fdoc.tags = fdoc.tags.split(/,\s*/);
   fdoc.profile = $$("#profile").profile;
 
-  fdoc.html = fdoc.adlib;
+  fdoc.html = fdoc.adlib.replace(/<.*?>/g, '');
   
   var tokens = fdoc.adlib.match(/\{\{[\w-_\d]+\}\}/g);
   
@@ -24,6 +24,9 @@ function() {
           fdoc.tokens += '<input type="text" name="' + name + '" placeholder="' + placeholder + '">';
       }
   }
+
+  var markdown = $$(this).app.require("vendor/couchapp/lib/markdown");
+  fdoc.html = markdown.encode(fdoc.html);
 
   $$(this).app.db.saveDoc(fdoc, {
     success : function() {

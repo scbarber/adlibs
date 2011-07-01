@@ -123,18 +123,18 @@ input[type="reset"]:hover,
 
 #adlib article span { text-decoration: underline; }
 
-#adlibs ul {
+#adlibs ul#list_of_libs {
     list-style: none;
     border-top: 1px solid #ddd;
     margin-top: 1em;
 }
 
-#adlibs ul li {
+#adlibs ul#list_of_libs li {
     border-bottom: 1px solid #ddd;
     padding: 1em 0;
 }
 
-#adlibs ul li:nth-child(even) {
+#adlibs ul#list_of_libs li:nth-child(even) {
     background: #eee;
 }
 
@@ -148,6 +148,7 @@ input[type="reset"]:hover,
 .meta {
     font-size: 11px;
     color: #aaa;
+    line-height: 1.75em;
 }
 
 .avatar img {
