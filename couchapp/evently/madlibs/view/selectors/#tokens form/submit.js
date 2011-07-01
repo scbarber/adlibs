@@ -29,7 +29,7 @@ function(data) {
 	
     if (profile) {
         // Add ability to save the results
-        $('#madlib').append('<div class="save"><input type="button" id="save" value="Save my result"><span></span></div>');
+        $('#madlib div.save').html('<input type="button" id="save" value="Save my result"><span></span>');
         $('input#save').click(function(data) {
             if (!profile) return(false); // Safeguard
 
@@ -56,9 +56,9 @@ function(data) {
         
         // Add ability to upvote a lib
         if (madlib.voters && jQuery.inArray(profile.name, madlib.voters) > -1) {
-            $('#madlib').prepend('<div class="vote">+1</div>');
+            $('#madlib div.vote').html('+1');
         } else {
-            $('#madlib').prepend('<div class="vote"><input type="button" id="vote" value="+1"></div>');
+            $('#madlib div.vote').html('<input type="button" id="vote" value="+1">');
             $('input#vote').click(function(data) {
                 if (!profile) return(false); // Safeguard
 
