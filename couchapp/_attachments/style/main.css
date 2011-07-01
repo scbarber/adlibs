@@ -151,6 +151,12 @@ input[type="reset"]:hover,
     line-height: 1.75em;
 }
 
+.meta .actions { float: right; }
+
+.meta .actions a {
+    padding-right: 1em;
+}
+
 .avatar img {
     float: left;
     margin-right: 1em;
