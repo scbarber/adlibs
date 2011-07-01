@@ -39,7 +39,7 @@ header a:hover {
     color: white;
 }
 
-#account { float: right; }
+#account { float: right; font-size: 13px; }
 #account * { display: inline-block; }
 #account form { background: rgb(80,80,80); }
 #account form input { width: auto; }
@@ -93,7 +93,7 @@ input[type="reset"]:hover,
     font-size: 11px;
     font-style: oblique;
 }
-.tags span {
+.tags a.tag {
     background: rgb(60,60,60);
     color: rgb(232,232,232);
     padding: 1px 7px;
@@ -104,7 +104,7 @@ input[type="reset"]:hover,
     -moz-border-radius: 10px;
     text-shadow: #333 1px 1px 1px;
 }
-.tags span:hover {
+.tags a.tag:hover {
     color: rgb(60,60,60);
     background: rgb(232,232,232);
     text-shadow: #f9f9f9 1px 1px 1px;
