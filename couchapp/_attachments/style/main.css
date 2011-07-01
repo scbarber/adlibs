@@ -3,7 +3,7 @@ h1, h2, h3 {
     text-shadow: #f9f9f9 2px 2px 2px;
     font-family: Georgia, serif;
 }
-label { display: block; font-weight: bold; }
+label { display: block; font-weight: bold; margin-top: 1em; }
 a { color: #888; text-decoration: none; text-shadow: #f9f9f9 1px 1px 1px; }
 a:hover { text-decoration: underline; }
 a:visited { color: #444; }
@@ -16,6 +16,10 @@ form {
     background-color: rgb(222,222,222);
     padding: 1em;
 }
+
+div#fancybox-outer { background-color: #fafafa; }
+div#fancybox-content { border-color: #fafafa; }
+
 form input[type="text"] { width: 50%; }
 
 /* Layout and styles */
@@ -61,17 +65,25 @@ nav {
     margin-bottom: 1em;
 }
 
-#profile form {
+#profile form#add-edit-lib {
     display: none;
     margin: 1em 0;
+    width: 75%;
 }
 
-#profile form textarea { height: 150px; width: 50%; }
+div#fancybox-content form { background: none;}
+
+form#add-edit-lib textarea { height: 200px; }
+
+form#add-edit-lib textarea,
+form#add-edit-lib input[type="text"] {
+    width: 100%;
+}
 
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
-#profile div {
+#profile a#add-lib {
     cursor: pointer;
     padding: 5px 15px;
     border: 2px solid #ccc;
@@ -84,7 +96,7 @@ input[type="reset"],
 input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
-#profile div:hover {
+#profile a#add-lib:hover {
     background: #e0e0e0;
 }
 
