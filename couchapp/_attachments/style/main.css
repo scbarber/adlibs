@@ -157,3 +157,5 @@ input[type="reset"]:hover,
 
 div.save { margin-top: 1em; }
 div.save span { padding-left: 1em; color: #aaa; }
+
+div.vote { float: right; color: #aaa; }

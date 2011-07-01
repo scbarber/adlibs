@@ -1,6 +1,7 @@
 function(data) {
     var madlib = $$('#madlibs').madlib;
     var db = $$(this).app.db;
+    var profile = $$("#profile").profile;
 
     var errors = false;
 	$(this).find('input[type="text"]').each(function(){
@@ -26,11 +27,10 @@ function(data) {
         });
 	}
 	
-    if ($$("#profile").profile) {
+    if (profile) {
+        // Add ability to save the results
         $('#madlib').append('<div class="save"><input type="button" id="save" value="Save my result"><span></span></div>');
         $('input#save').click(function(data) {
-            var profile = $$("#profile").profile;
-
             if (!profile) return(false); // Safeguard
 
             // Save the tokens
@@ -52,8 +52,32 @@ function(data) {
                     });
                 }
             });
-
         });
+        
+        // Add ability to upvote a lib
+        if (madlib.voters && jQuery.inArray(profile.name, madlib.voters) > -1) {
+            $('#madlib').prepend('<div class="vote">+1</div>');
+        } else {
+            $('#madlib').prepend('<div class="vote"><input type="button" id="vote" value="+1"></div>');
+            $('input#vote').click(function(data) {
+                if (!profile) return(false); // Safeguard
+
+                db.openDoc(madlib._id, {
+                    success: function(doc) {
+                        if (!doc.voters) doc.voters = [];
+                        doc.voters.push(profile.name);
+                        doc.votes++;
+                        db.saveDoc(doc, {
+                            success: function(doc) {
+                                madlib = doc;
+                                $('div.vote').html("+1");
+                            }
+                        });
+                    }
+                });
+
+            });
+        }
     }
 	
 	return(false);
