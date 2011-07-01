@@ -1,0 +1,26 @@
+<h2>{{title}}</h2>
+<div class="meta">
+	{{#profile}}
+	<div class="avatar">
+      {{#gravatar_url}}<img src="{{gravatar_url}}" alt="{{name}}"/>{{/gravatar_url}}
+      <div class="name">
+        {{nickname}}
+      </div>
+    </div>
+    {{/profile}}
+	Votes: {{votes}}
+	Views: {{lib_count}}
+	Saved: {{saved_count}}
+	<div stye="clear: left"/>
+</div>
+<div id="tokens">
+	<form>
+		{{{tokens}}}
+		<input type="submit" value="Lib it!">
+	</form>
+</div>
+<div id="adlib" style="display: none">
+	<div class="vote"/>
+	<article>{{{html}}}</article>
+	<div class="save"/>
+</div>

@@ -1,0 +1,11 @@
+  {{#adlibs}}
+	<li>
+		<a class="title" href="#/adlibs/view/{{id}}">{{title}}</a>
+		<div class="popularity">{{votes}} votes</div>
+		<div class="tags">Tags:
+			{{#tags}}
+			<a class="tag" href="#/adlibs/tagged/{{.}}">{{.}}</a>
+			{{/tags}}
+		</div>
+	</li>
+  {{/adlibs}}

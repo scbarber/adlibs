@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<title>Mad Libs</title>
+		<title>*adLibs</title>
 		<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -14,17 +14,17 @@
 	<body lang="en">
 		<header>
 			<div id="account"></div>
-			<h1>Mad Libs</h1>
+			<h1>*adLibs</h1>
 			<nav>
 				<a href="#/">Home</a> |
-				<a href="#/madlibs/recent">Recent</a> |
-				<a href="#/madlibs/popular">Popular</a> |
-				<a href="#/madlibs/best">Best</a>
+				<a href="#/adlibs/recent">Recent</a> |
+				<a href="#/adlibs/popular">Popular</a> |
+				<a href="#/adlibs/best">Best</a>
 			</nav>
 		</header>
 
 		<section id="profile"></section>
-		<section id="madlibs"></section>
+		<section id="adlibs"></section>
 	</body>
 	<script src="vendor/couchapp/loader.js"></script>
 	<script src="vendor/couchapp/jquery.pathbinder.js"></script>
@@ -33,7 +33,7 @@
 		$("#account").evently("account", app);
 		$("#profile").evently("profile", app);
 		$.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
-		$("#madlibs").evently("madlibs", app);
+		$("#adlibs").evently("adlibs", app);
 		$.pathbinder.begin("/");
 		});
 	</script>

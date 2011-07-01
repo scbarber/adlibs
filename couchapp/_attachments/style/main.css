@@ -110,31 +110,31 @@ input[type="reset"]:hover,
     text-shadow: #f9f9f9 1px 1px 1px;
 }
 
-#madlibs {
+#adlibs {
     text-shadow: #f9f9f9 1px 1px 1px;
 }
 
-#tokens, #madlib {
+#tokens, #adlib {
     margin-top: 1em;
 }
 
 #tokens form input { display: block; margin-bottom: 1em; }
 #tokens form input.hasErrors { border-color: red; }
 
-#madlib article span { text-decoration: underline; }
+#adlib article span { text-decoration: underline; }
 
-#madlibs ul {
+#adlibs ul {
     list-style: none;
     border-top: 1px solid #ddd;
     margin-top: 1em;
 }
 
-#madlibs ul li {
+#adlibs ul li {
     border-bottom: 1px solid #ddd;
     padding: 1em 0;
 }
 
-#madlibs ul li:nth-child(even) {
+#adlibs ul li:nth-child(even) {
     background: #eee;
 }
 

@@ -5,13 +5,13 @@ function() {
   fdoc.results = [];
   fdoc.lib_count = 0;
   fdoc.votes = 0;
-  fdoc.type = 'madlib';
+  fdoc.type = 'adlib';
   fdoc.tags = fdoc.tags.split(/,\s*/);
   fdoc.profile = $$("#profile").profile;
 
-  fdoc.html = fdoc.madlib;
+  fdoc.html = fdoc.adlib;
   
-  var tokens = fdoc.madlib.match(/\{\{[\w-_\d]+\}\}/g);
+  var tokens = fdoc.adlib.match(/\{\{[\w-_\d]+\}\}/g);
   
   if (tokens.length > 0) {
       fdoc.tokens = '';
