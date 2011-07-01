@@ -117,9 +117,7 @@ input[type="reset"]:hover,
     text-shadow: #333 1px 1px 1px;
 }
 .tags a.tag:hover {
-    color: rgb(60,60,60);
-    background: rgb(232,232,232);
-    text-shadow: #f9f9f9 1px 1px 1px;
+    background: #555;
 }
 
 #adlibs {
