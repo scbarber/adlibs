@@ -14,6 +14,7 @@ function(data) {
     
     for (r in doc.results) {
         doc.results[r].created_on = $.prettyDate(doc.results[r].created_on);
+        doc.results[r].index = r
     }
 
     if (profile && doc.profile.name == profile.name) {

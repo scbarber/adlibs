@@ -140,7 +140,7 @@ input[type="reset"]:hover,
 }
 
 #saved-results ul { margin-left: 2em; }
-#saved-results ul li { cursor: pointer; }
+#saved-results ul li div.adlib { display: none; }
 
 .adlib article span { text-decoration: underline; }
 

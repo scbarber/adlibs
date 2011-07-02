@@ -26,7 +26,7 @@
 	<h3>Saved Results</h3>
 	<ul>
 {{#results}}
-		<li>Saved by {{#profile}}{{nickname}}{{/profile}}&nbsp;{{created_on}}</li>
+		<li><a rel="adlibs" href="#adlib-{{index}}">Saved by {{#profile}}{{nickname}}{{/profile}}&nbsp;{{created_on}}</a><div id="adlib-{{index}}" class="adlib"><article>{{{html}}}</article></div></li>
 {{/results}}
 	</ul>
 </div>
