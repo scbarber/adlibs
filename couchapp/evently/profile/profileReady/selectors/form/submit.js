@@ -37,7 +37,7 @@ function() {
           var placeholder = name.replace(/[-_]/g, ' ').replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
   		
           fdoc.html = fdoc.html.replace(t, '<span id="' + name + '"></span>');
-          fdoc.tokens += '<input type="text" name="' + name + '" placeholder="' + placeholder + '">';
+          fdoc.tokens += '<input type="text" name="' + name + '" required placeholder="' + placeholder + '">';
       }
   }
 
